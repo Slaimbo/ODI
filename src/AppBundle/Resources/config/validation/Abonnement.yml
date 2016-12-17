@@ -1,0 +1,5 @@
+AppBundle\Entity\Abonnement:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [nomabonnement]
+            message: 'Cet abonnement existe déjà'

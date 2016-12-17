@@ -1,0 +1,7 @@
+AppBundle\Entity\Personne:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: 
+            fields: [nompersonne, prenompersonne]
+            message: 'Cette personne existe déjà'
+    properties:
+

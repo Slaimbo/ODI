@@ -1,0 +1,52 @@
+# pour pouvoir faire du routage par annotation dans les controlleurs
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    
+    
+    
+listproduit:
+    path: /produits/list/{message}
+    defaults: {_controller: AppBundle:Produit:listProduit, message: ''}
+    
+auth:
+    path: /auth/form/
+    defaults: {_controller: AppBundle:User:auth}
+    
+disconnect:
+    path: /auth/disconnect
+    defaults: {_controller: AppBundle:User:disconnect}
+
+interface_magasinier:
+    path: /magasinier/interface
+    defaults: {_controller: AppBundle:Magasinier:interface}
+
+
+
+
+
+
+
+
+
+
+
+addpersonne:
+    path: /personne/add
+    defaults: {_controller: AppBundle:Personne:addPersonne }
+    
+updatepersonne:
+    path: /personne/update/{nompersonne}/{prenompersonne}
+    defaults: {_controller: AppBundle:Personne:updatePersonne }
+
+listlieux:
+    path: /lieu/list.html/{message}
+    defaults: {_controller: AppBundle:Lieu:listLieu, message: ''}
+    
+deletelieux:
+    path: /lieu/deletelieu.html/{message}
+    defaults: {_controller: AppBundle:Lieu:deleteLieu, message: ''}
+    
+updatelieu:
+    path: /lieu/updatelieu.html/{lieu_id}
+    defaults: {_controller: AppBundle:Lieu:updateLieu, lieu_id: ''}

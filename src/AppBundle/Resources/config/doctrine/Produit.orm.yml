@@ -1,0 +1,22 @@
+AppBundle\Entity\Produit:
+    repositoryClass: AppBundle\Repository\ProduitRepository
+    type: entity
+    table: produit
+    id:
+        numproduit:
+            generator:
+                strategy:
+                    IDENTITY
+    fields:
+        nomproduit:
+            type: string
+            nullable: false
+        prix:
+            type: float
+            nullable: false
+        qte:
+            type: integer
+            nullable: false
+        visible:
+            type: boolean
+            nullable: false
