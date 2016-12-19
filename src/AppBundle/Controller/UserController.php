@@ -3,6 +3,7 @@ namespace AppBundle\Controller;
 use AppBundle\Form\Type\UserType;
 use AppBundle\Entity\User;
 use AppBundle\Entity\Client;
+use AppBundle\Entity\Magasinier;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -11,7 +12,7 @@ class UserController extends Controller{
     public function authAction(Request $request) {
         //On regarde si l'utilisateur est deja logé
         $session = $request->getSession();
-        $mes = '';
+        $mes = "Veuillez entrer vos identifiant";
         
         //Si l'utilisateur est deja logé on le log pas une autre fois
         if( $session->get('isAuth') == 'yes' )
