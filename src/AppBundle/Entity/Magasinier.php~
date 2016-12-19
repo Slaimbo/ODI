@@ -95,4 +95,3 @@ class Magasinier
         return $this->login;
     }
 }
-

@@ -95,4 +95,3 @@ class Produit_dans_panier
         return $this->numproduit;
     }
 }
-

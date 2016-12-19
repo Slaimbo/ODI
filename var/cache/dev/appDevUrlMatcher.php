@@ -130,12 +130,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/personne')) {
             // addpersonne
             if ($pathinfo === '/personne/add') {
-                return array (  '_controller' => 'AppBundle:Personne:addPersonne',  '_route' => 'addpersonne',);
+                return array (  '_controller' => 'AppBundle\\Controller\\PersonneController::addPersonneAction',  '_route' => 'addpersonne',);
             }
 
             // updatepersonne
             if (0 === strpos($pathinfo, '/personne/update') && preg_match('#^/personne/update/(?P<nompersonne>[^/]++)/(?P<prenompersonne>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'updatepersonne')), array (  '_controller' => 'AppBundle:Personne:updatePersonne',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'updatepersonne')), array (  '_controller' => 'AppBundle\\Controller\\PersonneController::updatePersonneAction',));
             }
 
         }

@@ -136,7 +136,7 @@ class Personne
      *
      * @return Personne
      */
-    public function setPersonneAbonnement(\AppBundle\Entity\Abonnement $personneabonnement = null)
+    public function setPersonneabonnement(\AppBundle\Entity\Abonnement $personneabonnement = null)
     {
         $this->personneabonnement = $personneabonnement;
 
@@ -148,10 +148,8 @@ class Personne
      *
      * @return \AppBundle\Entity\Abonnement
      */
-    public function getPersonneAbonnement()
+    public function getPersonneabonnement()
     {
         return $this->personneabonnement;
     }
-
 }
-

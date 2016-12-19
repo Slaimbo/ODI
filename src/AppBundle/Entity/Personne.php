@@ -153,4 +153,3 @@ class Personne
         return $this->personneabonnement;
     }
 }
-
